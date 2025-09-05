@@ -35,7 +35,7 @@ try {
    
     $mail->setFrom($email, $name);
     $mail->Sender = $mail->Username; // Prevent Gmail rejection
-    $mail->addAddress('kf.lee@techkool.com.my');
+    $mail->addAddress('afiqezman18@gmail.com');
 
     $mail->isHTML(true);
     $mail->Subject = 'Form Submission';
@@ -57,3 +57,4 @@ try {
     http_response_code(500);
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
