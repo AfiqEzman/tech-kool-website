@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Room - Tech-Kool</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #f8f9fa;
+        color: #333;
+    }
+    header {
+        background: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    header img.logo {
+        height: 50px;
+    }
+    nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+    nav a:hover {
+        color: #180379;
+    }
+    .hero {
+        position: relative;
+        background: url('images/coldroom.jpg') center/cover no-repeat;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+    }
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.55);
+    }
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 3rem 2rem;
+        background: #fff;
+    }
+    .feature-card {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+    .feature-card i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #180379;
+    }
+    .cta {
+        text-align: center;
+        background: #180379;
+        color: #fff;
+        padding: 3rem 2rem;
+    }
+    .cta a {
+    background: #25D366;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Add transition here */
+   }
+
+   .cta a:hover {
+    background: #1ebe57;
+    box-shadow: 0 4px 12px rgba(37, 214, 86, 0.6);
+   }
+
+    footer {
+        background: #222;
+        color: #ccc;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    footer a {
+        color: #ccc;
+        margin: 0 0.5rem;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="images/logo1.jpeg" alt="Tech-Kool" class="logo">
+    <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Products</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Cold Room</h1>
+        <p>Our Cold Rooms are engineered for maximum storage efficiency while maintaining strict temperature control. They are ideal for food storage, pharmaceuticals, and other temperature-sensitive products.</p>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <i class="fas fa-temperature-low"></i>
+        <h3>Precise Cooling</h3>
+        <p>Maintains stable temperatures for sensitive products.</p>
+    </div>
+    <div class="feature-card">
+        <i class="fas fa-boxes"></i>
+        <h3>High Capacity</h3>
+        <p>Designed for bulk storage without compromising quality.</p>
+    </div>
+    <div class="feature-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Energy Efficient</h3>
+        <p>Built to save power while maintaining performance.</p>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Interested in our Cold Room?</h2>
+    <p>Chat with us on WhatsApp to get a quote or more information.</p>
+    <a href="https://wa.me/60127711020?text=Hello%2C%20I%20am%20interested%20in%20your%20Cold%20Room." target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+</section>
+
+<footer>
+    <p>Tech-<span style="color: #fff;">Kool</span> | All rights reserved</p>
+    <div>
+        <a href="index.html#home">Home</a>|
+        <a href="index.html#about">About</a>|
+        <a href="index.html#services">Products</a>|
+        <a href="index.html#projects">Projects</a>|
+        <a href="index.html#contact">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>
