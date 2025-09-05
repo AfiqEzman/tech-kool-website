@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
-require 'PHPMailer/Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+require 'Exception.php';
 
 $mail = new PHPMailer(true);
 
@@ -57,4 +57,5 @@ try {
     http_response_code(500);
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
 
