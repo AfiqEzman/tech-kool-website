@@ -13,8 +13,8 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'muhammadafiqezman@gmail.com'; // Gmail account
-    $mail->Password = 'hcdh fdlb gebg tyqs'; // Gmail App Password
+    $mail->Username = 'techkoolrefrigeration@gmail.com'; // Gmail account
+    $mail->Password = 'smns efjq pcan clkj'; // Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
@@ -35,7 +35,7 @@ try {
    
     $mail->setFrom($email, $name);
     $mail->Sender = $mail->Username; // Prevent Gmail rejection
-    $mail->addAddress('afiqezman18@gmail.com');
+    $mail->addAddress('kf.lee@techkool.com.my');
 
     $mail->isHTML(true);
     $mail->Subject = 'Form Submission';
@@ -57,5 +57,6 @@ try {
     http_response_code(500);
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
 
 
