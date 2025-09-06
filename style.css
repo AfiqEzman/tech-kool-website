@@ -759,72 +759,67 @@ section {
   color: var(--black);
 }
 
-.projects-container .projects .box {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-    transform: translateY(30px);
-    opacity: 0;
-    transition: all 0.6s ease;
-    height: 300px;
-    will-change: transform, opacity;
-    transition: all 0.6s ease;
-}
-
+/* Unified projects styles (removed duplicates, fixed responsive behavior) */
 .projects .box-container {
-   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
+  width: 100%;
 }
 
-/*.projects-container .projects .box-container .box {
-  width: 30rem;
-  height: auto;
-  display: flex;
-  flex-direction: column; 
-}
-  */
-
-.projects-container .projects .box-container .box {
-  border: 1px solid var(--yellow);
-  border-radius: 10px;
+.projects-container .projects .box {
+  position: relative;
   overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  /* removed forced height so grid can size naturally */
+  will-change: transform, opacity;
+  border: 1px solid var(--yellow);
   box-shadow: var(--box-shadow);
 }
 
-
-.projects-container .projects .box-container .box:hover .image img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+/* visible state used by intersection observer */
+.projects .box.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
-.projects-container .projects .box-container .box .image {
-    height: 25rem;
+.projects-container .projects .box .image {
+  height: 25rem;
   overflow: hidden;
 }
 
-.projects-container .projects .box-container .box .image img {
-height: 100%;
+.projects-container .projects .box .image img,
+.projects .box img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 10px 10px 0 0;
 }
 
-.projects-container .projects .box-container .box .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.projects-container .projects .box:hover .image img,
+.projects .box:hover img {
+  transform: scale(1.1);
+}
+
+/* content area (kept your original layout intention) */
+.projects-container .projects .box .content {
   display: flex;
   background: var(--white);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-.projects-container .projects .box-container .box .content .info {
+.projects-container .projects .box .content .info {
   padding: 1rem 2rem;
 }
 
@@ -849,6 +844,37 @@ height: 100%;
   text-align: center;
   line-height: 7.5rem;
 }
+
+/* overlay (unified single definition) */
+.projects .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.projects .box:hover .overlay {
+    opacity: 1;
+}
+
+.projects .box a {
+  display: block;
+  height: 100%;
+}
+
+/* ======= end unified projects block ======= */
 
 .reviews .slide p {
   padding: 1.5rem;
@@ -1431,7 +1457,10 @@ body.dark-mode .btn:hover {
     width: 35px;
     height: 35px;
 }
-/* === Accessibility & Dark Mode Enhancements === */
+* {
+    outline: none;
+}
+
 :focus {
     outline: 2px solid var(--yellow);
     outline-offset: 2px;
