@@ -377,6 +377,25 @@ menuBtn.addEventListener('click', () => {
 });
 </script>
 
+<script>
+// ==== CONTACT INFO TOGGLE ====
+const infoBtn = document.getElementById('info-btn');
+const contactInfo = document.querySelector('.contact-info');
+const closeContactInfo = document.getElementById('close-contact-info');
+
+infoBtn.addEventListener('click', () => {
+    contactInfo.classList.add('active'); // show the panel
+    // hide other forms
+    searchForm?.classList.remove('active');
+    loginForm?.classList.remove('active');
+    navbar.classList.remove('active');
+});
+
+closeContactInfo.addEventListener('click', () => {
+    contactInfo.classList.remove('active'); // hide the panel
+});
+</script>
+
  <script>
    const counters = document.querySelectorAll('.counter');
 
@@ -676,6 +695,7 @@ new Swiper(".home-slider", {
 </body>
 
 </html>
+
 
 
 
