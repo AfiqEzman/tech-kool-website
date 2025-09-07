@@ -1511,3 +1511,34 @@ body.dark-mode .projects .overlay {
   transform: scale(1.1) !important;
   transition: all 0.3s ease !important;
 }
+
+/* ===== MOBILE NAVIGATION ===== */
+@media (max-width: 768px) {
+  .header .navbar {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff; /* adjust according to your theme */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 100;
+  }
+
+  .header .navbar a {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .header .navbar.active {
+    max-height: 500px; /* enough to show all links */
+  }
+
+  /* Hamburger icon rotation */
+  #menu-btn.active {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+}
