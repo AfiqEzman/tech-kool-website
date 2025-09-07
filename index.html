@@ -363,61 +363,19 @@
   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat with us on WhatsApp" />
 </a>
 
- <script>
-   // ===== HEADER ELEMENTS =====
-const menuBtn = document.getElementById('menu-btn');
+   <script>
+ const menuBtn = document.getElementById('menu-btn');
 const navbar = document.querySelector('.header .navbar');
-
-const searchBtn = document.querySelector('.header .flex .icons #search-btn'); // assuming you have an icon with id="search-btn"
-const searchForm = document.querySelector('.header .flex .search-form');
-
-const loginBtn = document.querySelector('.header .flex .icons #login-btn'); // assuming you have an icon with id="login-btn"
-const loginForm = document.querySelector('.header .flex .login-form');
-
-const infoBtn = document.querySelector('.header .flex .icons #info-btn'); // assuming you have an icon with id="info-btn"
-const contactInfo = document.querySelector('.contact-info');
-const closeContactInfo = document.getElementById('close-contact-info');
-
 
 menuBtn.addEventListener('click', () => {
     navbar.classList.toggle('active');
-    
-    searchForm.classList.remove('active');
-    loginForm.classList.remove('active');
+    menuBtn.classList.toggle('active'); // rotate icon
+
+    // hide other forms if open
+    searchForm?.classList.remove('active');
+    loginForm?.classList.remove('active');
 });
-
-
-searchBtn?.addEventListener('click', () => {
-    searchForm.classList.toggle('active');
-    
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
-});
-
-loginBtn?.addEventListener('click', () => {
-    loginForm.classList.toggle('active');
-    
-    searchForm.classList.remove('active');
-    navbar.classList.remove('active');
-});
-
-
-infoBtn?.addEventListener('click', () => {
-    contactInfo.classList.add('active');
-});
-
-closeContactInfo?.addEventListener('click', () => {
-    contactInfo.classList.remove('active');
-});
-
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.header')) {
-        searchForm.classList.remove('active');
-        loginForm.classList.remove('active');
-        navbar.classList.remove('active');
-    }
-});
- </script>
+</script>
 
  <script>
    const counters = document.querySelectorAll('.counter');
@@ -718,6 +676,7 @@ new Swiper(".home-slider", {
 </body>
 
 </html>
+
 
 
 
