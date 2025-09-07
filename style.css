@@ -1515,3 +1515,12 @@ body.dark-mode .projects .overlay {
     transition: transform 0.3s ease;
   }
 }
+
+  .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px !important; /* force right side */
+  left: auto !important;  /* cancel any left override */
+  z-index: 1000;
+}
+
