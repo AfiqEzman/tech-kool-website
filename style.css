@@ -1228,7 +1228,7 @@ section {
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease;
-  z-index: 1000;
+  z-index: 999999;
 }
 
 .whatsapp-float img {
