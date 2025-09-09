@@ -287,6 +287,10 @@
    <label><input type="checkbox" name="services[]" value="Blower System"> Blower System</label><br>
    <label><input type="checkbox" name="services[]" value="Cold Room"> Cold Room</label><br>
 
+       <!-- Hidden fields -->
+   <input type="hidden" name="_subject" value="New Quotation Request">
+   <input type="hidden" name="_captcha" value="false">
+     
    <button type="submit" class="btn">Send</button>
 
    <!-- Inline success/error message -->
@@ -669,6 +673,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 </body>
 
 </html>
+
 
 
 
