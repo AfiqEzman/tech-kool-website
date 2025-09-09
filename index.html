@@ -270,7 +270,10 @@
    
          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3987.329442682004!2d103.3235321!3d2.0238831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d06dc5876a605f%3A0x781eccbefeb48f6b!2sTech-Kool%20Refrigeration%20Sdn.%20Bhd.!5e0!3m2!1sen!2smy!4v1740671886065!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    
-   <form id="contact-form">
+  <form id="contact-form" action="https://formsubmit.co/muhammadafiqezman@gmail.com" method="POST">
+   <!-- FormSubmit settings -->
+   <input type="hidden" name="_captcha" value="false">
+
    <h3>For Quotation</h3>
    <input type="text" name="name" placeholder="Business/Company Name" class="box" required>
    <input type="email" name="email" placeholder="Email" class="box" required>
@@ -279,16 +282,16 @@
    <input type="text" name="type" placeholder="Type of Business" class="box" required>
 
    <h1>What services are you interested in?</h1>
-      <label><input type="checkbox" name="services[]" value="Eutectic System"> Eutectic System</label><br>
-      <label><input type="checkbox" name="services[]" value="Insulated Box"> Insulated Box</label><br>
-      <label><input type="checkbox" name="services[]" value="Blower System"> Blower System</label><br>
-      <label><input type="checkbox" name="services[]" value="Cold Room"> Cold Room</label>
+   <label><input type="checkbox" name="services[]" value="Eutectic System"> Eutectic System</label><br>
+   <label><input type="checkbox" name="services[]" value="Insulated Box"> Insulated Box</label><br>
+   <label><input type="checkbox" name="services[]" value="Blower System"> Blower System</label><br>
+   <label><input type="checkbox" name="services[]" value="Cold Room"> Cold Room</label><br>
 
    <button type="submit" class="btn">Send</button>
 
-   </form>
-<div id="form-response" class="form-message" style="display: none;"></div>
-
+   <!-- Inline success/error message -->
+   <div id="form-response" class="form-message" style="display:none;"></div>
+</form>
    
    </section>
 
@@ -673,6 +676,7 @@ new Swiper(".home-slider", {
 </body>
 
 </html>
+
 
 
 
