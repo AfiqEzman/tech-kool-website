@@ -1216,9 +1216,9 @@ section {
 
 /* --- WhatsApp Floating Button --- */
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
   width: 60px;
   height: 60px;
   background-color: #25D366;
@@ -1228,7 +1228,7 @@ section {
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease;
-  z-index: 999999;
+  z-index: 2147483647 !important; /* ensures it's always on top */
 }
 
 .whatsapp-float img {
@@ -1239,7 +1239,6 @@ section {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
-
 
 .hamburger {
   display: block;
