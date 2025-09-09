@@ -1191,7 +1191,6 @@ section {
   .header .flex .login-form {
     width: 90%;
   }
-  @media (max-width: 768px) {
   .home .slide .content {
     width: 90%;    /* was 50rem */
     text-align: center;
