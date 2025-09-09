@@ -1489,32 +1489,6 @@ body.dark-mode .projects .overlay {
     transform: rotate(90deg);
     transition: transform 0.3s ease;
   }
-
-  /* --- WhatsApp Floating Button --- */
-.whatsapp-float {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  width: 60px;
-  height: 60px;
-  background-color: #25D366;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-  z-index: 2147483647 !important;
 }
-
-.whatsapp-float img {
-  width: 35px;
-  height: 35px;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
 
 
