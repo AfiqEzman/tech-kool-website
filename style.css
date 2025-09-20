@@ -1610,17 +1610,40 @@ body, html {
   }
 }
 
-/* Remove unwanted horizontal scroll and blue strip */
+/* ✅ Product section mobile fixes */
 @media (max-width: 768px) {
-  .services .box-container,
-  .projects .box-container {
+  .services {
+    background: #fff; /* make sure product section background is white */
+  }
+
+  .services .box-container {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;       /* center it */
-    padding: 0 10px;      /* add breathing space */
+    margin: 0 auto;       /* center align */
+    padding: 0 10px;      /* prevent touching screen edge */
     box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive grid */
+  }
+
+  .services .box .image {
+    height: auto; /* let images scale naturally */
+  }
+
+  .services .box img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* optional: keep them from being too tall */
+    object-fit: cover; /* ensures they don’t look stretched */
+    border-radius: 8px; /* keep neat rounded corners */
   }
 }
+
+@media (max-width: 500px) {
+  .services .box-container {
+    grid-template-columns: 1fr; /* stack in one column on very small screens */
+  }
+}
+
 
 
 
