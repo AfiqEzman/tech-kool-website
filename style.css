@@ -557,19 +557,15 @@ textarea.box:focus {
   border-radius: 8px;
   background: #f9f9f9;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;  /* smooth effect */
+  cursor: pointer;
 }
 
-/* Hover effect */
-.service-item span:hover {
-  background: #f1f1f1;
-}
-
-/* When checked, make it look selected */
+/* Checked state */
 .service-item input[type="checkbox"]:checked + span {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
+  background: #007bff !important;
+  color: white !important;
+  border-color: #007bff !important;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
 
