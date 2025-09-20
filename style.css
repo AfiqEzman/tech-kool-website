@@ -567,9 +567,7 @@ textarea.box:focus {
 
 /* When checked, make it look selected */
 .service-item input[type="checkbox"]:checked + span {
-  background: #007bff;
   color: white;
-  border-color: #007bff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
 
