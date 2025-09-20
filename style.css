@@ -1552,4 +1552,50 @@ body.dark-mode .projects .overlay {
   }
 }
 
+/* ✅ Mobile Fixes */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  header, .navbar, .navbar-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  .product-card, .product-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  .product-card img, .product-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+
+  .product-card button, .product-box button {
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+
 
