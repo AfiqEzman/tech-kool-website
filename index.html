@@ -165,7 +165,7 @@
 </div>
 
 <div class="box">
-   <h3 class="counter" data-target="10000">9000</h3>
+   <h3 class="counter" data-target="10000" data-start="9000">9000</h3>
    <p>Project completed</p>
 </div>
 
@@ -385,34 +385,36 @@ closeContactInfo.addEventListener('click', () => {
 </script>
 
  <script>
-   const counters = document.querySelectorAll('.counter');
+  const counters = document.querySelectorAll('.counter');
 
-   const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-         if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = +counter.getAttribute('data-target');
-            const duration = 2000; // total duration in ms
-            const stepTime = Math.max(Math.floor(duration / target), 20); // ensure smooth
+const observer = new IntersectionObserver((entries, observer) => {
+   entries.forEach(entry => {
+      if (entry.isIntersecting) {
+         const counter = entry.target;
+         const target = +counter.getAttribute('data-target');
+         const start = +counter.getAttribute('data-start') || 0; // default 0 if not provided
+         const duration = 2000; 
+         const stepTime = Math.max(Math.floor(duration / (target - start)), 20);
 
-            let count = 0;
-            const update = () => {
-               count++;
-               counter.innerText = count + (target >= 10 ? '+' : '');
-               if (count < target) {
-                  setTimeout(update, stepTime);
-               } else {
-                  counter.innerText = target + (target >= 10 ? '+' : '');
-               }
-            };
-            update();
+         let count = start;
+         const update = () => {
+            count++;
+            counter.innerText = count + (target >= 10 ? '+' : '');
+            if (count < target) {
+               setTimeout(update, stepTime);
+            } else {
+               counter.innerText = target + (target >= 10 ? '+' : '');
+            }
+         };
+         update();
 
-            observer.unobserve(counter); // run once
-         }
-      });
-   }, { threshold: 0.6 });
+         observer.unobserve(counter);
+      }
+   });
+}, { threshold: 0.6 });
 
-   counters.forEach(counter => observer.observe(counter));
+counters.forEach(counter => observer.observe(counter));
+
 </script>
 
 <script>
@@ -676,6 +678,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 </body>
 
 </html>
+
 
 
 
