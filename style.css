@@ -1570,22 +1570,21 @@ body, html {
     flex-wrap: wrap;
   }
 
-  /* Product boxes: stack neatly */
+   /* Product boxes: full width, but no extra big white background */
   .services .box-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* space between boxes */
+    gap: 30px; /* space between boxes */
     width: 100%;
   }
 
   .services .box-container .box {
-    width: 90% !important;   /* fit screen */
-    max-width: 400px;        /* prevent stretching too wide */
+    width: 95% !important;   /* fits screen with small margin */
     margin: 0 auto;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
+    background: transparent; /* ❌ remove big white box */
+    border: none;            /* ❌ remove border */
+    padding: 0;              /* ❌ remove extra padding */
     box-sizing: border-box;
     text-align: center;
   }
