@@ -518,20 +518,22 @@ section {
 textarea.box {
   width: 100%;
   padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #444;   /* thicker border */
+  border-radius: 8px;       /* rounded corners */
   font-size: 1rem;
-  font-family: inherit; /* keeps same font */
-  resize: vertical; /* allows user to resize only up/down */
-  min-height: 120px; /* gives enough height */
-  margin: .5rem 0; /* same spacing as inputs */
-  box-sizing: border-box; /* prevents overflow */
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+  margin: .5rem 0;
+  box-sizing: border-box;
+  background-color: #fff;   /* make sure background is white */
 }
 
 textarea.box:focus {
-  border-color: #007bff; /* highlight on focus */
   outline: none;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5); /* glowing effect */
 }
+
 
 .home {
   padding: 0;
