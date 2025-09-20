@@ -515,6 +515,23 @@ section {
   background: #0056b3; /* darker on hover */
 }
 
+textarea.box {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit; /* keeps same font */
+  resize: vertical; /* allows user to resize only up/down */
+  min-height: 120px; /* gives enough height */
+  margin: .5rem 0; /* same spacing as inputs */
+  box-sizing: border-box; /* prevents overflow */
+}
+
+textarea.box:focus {
+  border-color: #007bff; /* highlight on focus */
+  outline: none;
+}
 
 .home {
   padding: 0;
