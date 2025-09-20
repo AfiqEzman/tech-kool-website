@@ -1552,50 +1552,61 @@ body.dark-mode .projects .overlay {
   }
 }
 
-/* ✅ Mobile Fixes */
+/* Prevent horizontal scroll globally */
 body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
+/* Mobile/tablet fixes only */
 @media (max-width: 768px) {
-  header, .navbar, .navbar-container {
+
+  /* Navbar full width */
+  header, .header .flex, .navbar {
     width: 100% !important;
     max-width: 100% !important;
     overflow: hidden;
+    flex-wrap: wrap;
   }
 
-  .product-card, .product-box {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto 20px auto;
-    padding: 15px;
+  /* Product boxes: stack neatly */
+  .services .box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* space between boxes */
+    width: 100%;
+  }
+
+  .services .box-container .box {
+    width: 90% !important;   /* fit screen */
+    max-width: 400px;        /* prevent stretching too wide */
+    margin: 0 auto;
     background: #fff;
     border: 1px solid #ddd;
+    padding: 15px;
     box-sizing: border-box;
+    text-align: center;
   }
 
-  .product-card img, .product-box img {
-    display: block;
+  /* Images inside product boxes */
+  .services .box-container .box img {
     width: 100%;
     height: auto;
-    max-width: 100%;
-    margin: 0 auto;
+    display: block;
     border-radius: 4px;
+    margin-bottom: 10px;
   }
 
-  .product-card button, .product-box button {
-    display: block;
-    margin: 15px auto 0 auto;
+  /* Buttons inside boxes */
+  .services .box-container .box .btn {
+    display: inline-block;
     padding: 10px 20px;
     background: #000;
     color: #fff;
-    border: none;
+    text-decoration: none;
+    border-radius: 5px;
     font-size: 14px;
-    cursor: pointer;
   }
 }
-
-
-
