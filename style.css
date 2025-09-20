@@ -1609,3 +1609,23 @@ body, html {
     font-size: 14px;
   }
 }
+
+/* Apply only on small screens (mobile) */
+@media (max-width: 768px) {
+  .home .slide {
+    width: 100%;
+    height: 300px; /* smaller fixed height for mobile */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* show full image, no cropping */
+    background: #000;      /* optional background */
+  }
+}
+
