@@ -1610,4 +1610,17 @@ body, html {
   }
 }
 
+/* Remove unwanted horizontal scroll and blue strip */
+@media (max-width: 768px) {
+  .services .box-container,
+  .projects .box-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;       /* center it */
+    padding: 0 10px;      /* add breathing space */
+    box-sizing: border-box;
+  }
+}
+
+
 
