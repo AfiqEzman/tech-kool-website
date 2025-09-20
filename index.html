@@ -283,10 +283,27 @@
    <input type="text" name="type" placeholder="Type of Business" class="box" required>
 
    <h1>What services are you interested in?</h1>
-   <label><input type="checkbox" name="services[]" value="Eutectic System"> Eutectic System</label><br>
-   <label><input type="checkbox" name="services[]" value="Insulated Box"> Insulated Box</label><br>
-   <label><input type="checkbox" name="services[]" value="Blower System"> Blower System</label><br>
-   <label><input type="checkbox" name="services[]" value="Cold Room"> Cold Room</label><br>
+<div class="services-options">
+  <label class="service-item">
+    <input type="checkbox" name="services[]" value="Eutectic System">
+    <span>Eutectic System</span>
+  </label>
+
+  <label class="service-item">
+    <input type="checkbox" name="services[]" value="Insulated Box">
+    <span>Insulated Box</span>
+  </label>
+
+  <label class="service-item">
+    <input type="checkbox" name="services[]" value="Blower System">
+    <span>Blower System</span>
+  </label>
+
+  <label class="service-item">
+    <input type="checkbox" name="services[]" value="Cold Room">
+    <span>Cold Room</span>
+  </label>
+</div>
 
    <h3>Additional Details / Requirements</h3>
    <textarea name="message" class="box" rows="5" placeholder="Write your requirements here..."></textarea>
@@ -681,6 +698,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 </body>
 
 </html>
+
 
 
 
