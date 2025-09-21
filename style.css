@@ -1562,14 +1562,6 @@ body, html {
 /* Mobile/tablet fixes only */
 @media (max-width: 768px) {
 
-  /* Navbar full width */
-  header, .header .flex, .navbar {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: hidden;
-    flex-wrap: wrap;
-  }
-
    /* Product boxes: full width, but no extra big white background */
   .services .box-container {
     display: flex;
