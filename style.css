@@ -125,20 +125,17 @@ section {
 
 .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 1rem 3rem;
-  background: var(--black);
-  color: var(--white);
-  cursor: pointer;
-  font-size: 1.7rem;
-  text-transform: capitalize;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background: var(--yellow);
-  color: var(--white);
+  background-color: #e6b800;
 }
 
 @-webkit-keyframes fadeIn {
