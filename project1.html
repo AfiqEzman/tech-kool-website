@@ -23,6 +23,26 @@
     }
     header img.logo {
         height: 50px;
+   /* Hamburger (hidden on desktop) */
+    .hamburger {
+        display: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0.4rem;
+        margin-left: 1rem;
+        color: #333;
+        z-index: 1100;
+    }
+    .hamburger:focus {
+        outline: 2px solid rgba(24,3,121,0.25);
+        border-radius: 6px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
     }
     nav a {
         margin: 0 1rem;
@@ -33,6 +53,7 @@
     nav a:hover {
         color: #180379;
     }
+
     .hero {
         position: relative;
         background: url('project1 (2).jpg') center/cover no-repeat;
@@ -150,6 +171,43 @@
     footer a:hover {
         color: #fff;
     }
+
+/* ========== Mobile styles ========== */
+    @media (max-width: 768px) {
+      /* show hamburger */
+      .hamburger {
+        display: block;
+      }
+        
+      /* hide desktop nav, make mobile dropdown */
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px; /* adjust if you change header height */
+        right: 1rem;
+        width: 220px;
+        flex-direction: column;
+        background: #fff;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        z-index: 1050;
+      }
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+        color: #333;
+        padding: 0.35rem 0.25rem;
+      }
+
+      /* ensure header content stacks nicely */
+      header {
+        padding: 0.75rem 1rem;
+      }
+    }
 </style>
 </head>
 <body>
@@ -221,5 +279,6 @@
 
 </body>
 </html>
+
 
 
