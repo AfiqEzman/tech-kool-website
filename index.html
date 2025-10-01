@@ -505,33 +505,45 @@ counters.forEach(counter => observer.observe(counter));
 </script>
 
 <script>
-    // Fade-in on load
-    window.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('fade-in');
-    });
+// Fade-in on load
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
+});
 
-    // Fade-out on link click
-    document.querySelectorAll('a[href]').forEach(link => {
+// Fade-out on link click
+document.querySelectorAll('a[href]').forEach(link => {
   const href = link.getAttribute('href');
-  
-  // Skip hash links (they're handled by smooth scroll already)
+
+  // Skip hash links (already handled by smooth scroll)
   if (href.startsWith('#')) return;
 
   const url = new URL(link.href, window.location.href);
   if (url.origin === location.origin) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
-      document.body.classList.remove('fade-in');
-      document.body.classList.add('fade-out');
+      document.body.classList.remove("fade-in");
+      document.body.classList.add("fade-out");
 
       setTimeout(() => {
         window.location.href = this.href;
-      }, 500);
+      }, 500); // match your CSS transition duration
     });
   }
 });
 
-  </script>
+// Handle back/forward navigation (bfcache)
+window.addEventListener("pageshow", function(event) {
+  document.body.classList.remove("fade-out");
+  document.body.classList.add("fade-in");
+
+  if (event.persisted) {
+    // Page restored from cache → reapply visible classes
+    document.querySelectorAll('section, .projects-container, .services-container, .contact-container')
+      .forEach(el => el.classList.add('visible'));
+  }
+});
+</script>
+
 
   <script>
   const sections = document.querySelectorAll(
@@ -737,6 +749,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 </body>
 
 </html>
+
 
 
 
