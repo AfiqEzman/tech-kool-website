@@ -214,6 +214,64 @@
   color: #bbb;
 }
 
+     .developed {
+  font-weight: bold;
+  font-size: 14px;
+  background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite, glow 2s ease-in-out infinite alternate;
+  margin-top: 5px;
+}
+
+/* Rainbow color animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glow effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff7f00, 0 0 20px #ffff00;
+  }
+  to {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #0000ff, 0 0 30px #8b00ff;
+  }
+}
+
+/* Tablet view: 2 columns */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+}
+
+/* Mobile view: 1 column */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 15px 0;
+  }
+
+  .footer-column .social-icons {
+    justify-content: center; /* center social icons on mobile */
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
+
+
     /* ========== Mobile styles ========== */
     @media (max-width: 768px) {
       /* show hamburger */
@@ -355,8 +413,10 @@
 
   <div class="footer-bottom">
     <p>© 2025 Tech-Kool. All rights reserved.</p>
+    <p class="developed">Developed by AfWanIX</p>
   </div>
 </footer>
+    
 <script>
   (function () {
     const hamburger = document.getElementById('hamburger');
