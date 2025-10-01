@@ -1300,6 +1300,35 @@ textarea.box:focus {
   }
 }
 
+/* Tablet view: 2 columns */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+}
+
+/* Mobile view: 1 column */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 15px 0;
+  }
+
+  .footer-column .social-icons {
+    justify-content: center; /* center social icons on mobile */
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
+
 
 @media (max-width: 1200px) {
   section {
