@@ -1279,15 +1279,27 @@ textarea.box:focus {
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientMove 6s ease infinite;
+  animation: gradientMove 6s ease infinite, glow 2s ease-in-out infinite alternate;
   margin-top: 5px;
 }
 
+/* Rainbow color animation */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* Glow effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff7f00, 0 0 20px #ffff00;
+  }
+  to {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #0000ff, 0 0 30px #8b00ff;
+  }
+}
+
 
 @media (max-width: 1200px) {
   section {
