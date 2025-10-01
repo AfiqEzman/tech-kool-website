@@ -1272,6 +1272,23 @@ textarea.box:focus {
   color: #bbb;
 }
 
+.developed {
+  font-weight: bold;
+  font-size: 14px;
+  background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+  margin-top: 5px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @media (max-width: 1200px) {
   section {
     padding: 3rem 2rem;
