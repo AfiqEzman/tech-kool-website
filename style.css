@@ -1612,6 +1612,48 @@ body.dark-mode .btn:hover {
   height: 100%;
 }
 
+.projects .box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  text-align: center;
+  background: var(--white, #fff);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.projects .box:hover {
+  transform: translateY(-5px);
+}
+
+.projects .box img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+}
+
+.projects .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projects .box:hover .overlay {
+  opacity: 1;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--light-color, #555);
+  padding: 0.8rem 1rem 1.2rem;
+  line-height: 1.5;
+}
 
 * {
     outline: none;
