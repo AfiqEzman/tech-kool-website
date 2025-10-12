@@ -1760,3 +1760,83 @@ body, html {
     display: block !important;
   }
 }
+
+/*NEW NAVBAR CSS*/
+/* ===== Dropdown Menu ===== */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: var(--white, #fff);
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--black, #333);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: var(--light-bg, #f0f0f0);
+  color: var(--primary, #0077b6);
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+/* For mobile: allow tapping to open */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    padding-left: 1rem;
+  }
+  .dropdown-content a {
+    padding: 8px 0;
+  }
+}
+
