@@ -20,13 +20,32 @@
       <img src="logo1.jpeg" class="logo">
       
 
-      <nav class="navbar">
-         <a href="#home">home</a>
-         <a href="#about">about</a>
-         <a href="#services">products</a>
-         <a href="#projects">projects</a>
-         <a href="#contact">contact</a>
-      </nav>
+   <nav class="navbar">
+  <a href="#home">home</a>
+  <a href="#about">about</a>
+
+  <div class="dropdown">
+    <a href="#services" class="dropbtn">products <i class="fas fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="coldroom.html">Cold Room</a>
+      <a href="eutectic.html">Eutectic System</a>
+      <a href="insulated.html">Insulated Box</a>
+      <a href="blower.html">Blower System</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#projects" class="dropbtn">projects <i class="fas fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="project1.html">Brine Tank</a>
+      <a href="project2.html">Cold Storage</a>
+      <a href="project3.html">Cold Room Project</a>
+    </div>
+  </div>
+
+  <a href="#contact">contact</a>
+</nav>
+
    
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
@@ -727,6 +746,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 </body>
 
 </html>
+
 
 
 
